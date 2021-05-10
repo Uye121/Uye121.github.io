@@ -1,0 +1,18 @@
+@import '../../utils/variables';
+
+h5 {
+  margin: 0;
+  color:  #282C35;
+}
+
+.side-container {
+  order: 3;
+  flex: 1;
+  text-align: left;
+}
+
+@media only screen and (min-width: $min-tablet-size) {
+  .side-container {
+    order: 1;
+  }
+}

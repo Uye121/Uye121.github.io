@@ -1,0 +1,20 @@
+@import '../../utils/variables';
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+@media only screen and (min-width: $min-tablet-size) {
+  .homepage-container {
+    padding: 20px 25px;
+  }
+}
+
+@media only screen and (min-width: $min-desktop-size) {
+  .homepage-container {
+    padding: 20px 50px;
+  }
+}
