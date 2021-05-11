@@ -12,7 +12,7 @@ const ProjectItem = ({ title, image, openModal }) => {
       <div
         className='background-image'
         style={{
-          backgroundImage: `url(${image})`
+          backgroundImage: `url(${process.env.PUBLIC_URL}/${image})`
         }}
       >
       </div>

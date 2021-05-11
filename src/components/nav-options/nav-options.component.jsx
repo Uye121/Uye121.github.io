@@ -1,42 +1,63 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from "react-scroll";
 
-import MenuIcon from '../menu-icon/menu-icon.component';
+import MenuButton from '../menu-button/menu-button.component';
+import CloseButton from '../close-button/close-button.component';
+
+import useOutsideAlerter from '../hooks/useOutsideAlerter.component';
 
 import pdf from '../../assets/UlricYe_Resume.pdf';
 
 import './nav-options.styles.scss';
 
-const NavOptions = () => {
+const NavOptions = ({ active }) => {
   const [showClosedIcon, setShowClosedIcon] = useState(false);
+  const wrapperRef = useRef(null);
+
+  useOutsideAlerter(showClosedIcon, setShowClosedIcon, wrapperRef);
+
+  const clickLinkHanlder = () => {
+    setShowClosedIcon(false);
+  }
 
   return (
     <React.Fragment>
-        <MenuIcon 
-          showClosedIcon={showClosedIcon} 
-          setShowClosedIcon={setShowClosedIcon} 
-        />
-        <ul className={`${showClosedIcon ? 'show' : ''} options-container`}>
-          <li>
-            <Link 
-              className='option'
-              to='projects'
-              spy={true}
-              smooth={true}
-            >
-              PROJECTS
-            </Link>
-          </li>
-          <li>
-            <a 
-              href={pdf} 
-              target="_blank" 
-              rel="noreferrer"
-            >
-              RÉSUMÉ
-            </a>
-          </li>
-        </ul>
+      <MenuButton 
+        showClosedIcon={showClosedIcon} 
+        setShowClosedIcon={setShowClosedIcon} 
+      />
+      <ul 
+        ref={wrapperRef}
+        className={`${showClosedIcon ? 'show' : ''} ${active? 'active ' : ''}options-container`}
+      >
+        <li>
+          <CloseButton
+            showClosedIcon={showClosedIcon} 
+            setShowClosedIcon={setShowClosedIcon}
+          />
+        </li>
+        <li>
+          <Link 
+            className='option'
+            to='projects'
+            spy={true}
+            smooth={true}
+            onClick={() => clickLinkHanlder()}
+          >
+            PROJECTS
+          </Link>
+        </li>
+        <li>
+          <a 
+            href={pdf} 
+            target="_blank" 
+            rel="noreferrer"
+            onClick={() => clickLinkHanlder()}
+          >
+            RÉSUMÉ
+          </a>
+        </li>
+      </ul>
     </React.Fragment>
   )
 };

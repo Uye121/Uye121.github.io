@@ -1,0 +1,11 @@
+@import '../../utils/variables';
+
+.fa-bars {
+  display: inherit;
+}
+
+@media only screen and (min-width: $min-tablet-size) {
+  .fa-bars {
+    display: none;
+  }
+}

@@ -10,6 +10,7 @@ const About = () => (
     <h2>
       <span className='text-1'>a Web Developer.</span>
       <span className='text-2'>an UX Designer.</span>
+      <span className='text-3'>a React Native Developer.</span>
     </h2>
   </div>
 );

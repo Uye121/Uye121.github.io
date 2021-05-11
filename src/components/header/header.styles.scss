@@ -1,6 +1,7 @@
 @import '../../utils/variables';
 
 .header-container {
+  position: fixed;
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -10,6 +11,14 @@
   justify-content: space-between;
   font-weight: bold;
   font-size: medium;
+  z-index: 10;
+
+  &.active {
+    background-color: #ccc;
+    border-bottom: 1px solid #ccc;
+    color: white;
+    transition: 0.7s;
+  }
 }
 
 @media only screen and (min-width: $min-tablet-size) {

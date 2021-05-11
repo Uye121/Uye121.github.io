@@ -1,7 +1,7 @@
 const DirectoryData = [
   {
     title: 'YelpCamp',
-    image: './assets/images/yelpcamp_prev.png',
+    image: 'assets/images/yelpcamp_prev.png',
     id: 5,
     siteUrl: 'https://yelp-camp-0819.herokuapp.com/',
     githubUrl: 'https://github.com/Uye121/YelpCamp',
@@ -10,7 +10,7 @@ const DirectoryData = [
   },
   {
     title: 'HackXR',
-    image: './assets/images/hackxr_prev.png',
+    image: 'assets/images/hackxr_prev.png',
     id: 4,
     siteUrl: '',
     githubUrl: 'https://github.com/Uye121/hackXRsite',
@@ -19,7 +19,7 @@ const DirectoryData = [
   },
   {
     title: 'Triton XR',
-    image: './assets/images/txr_prev.png',
+    image: 'assets/images/txr_prev.png',
     id: 3,
     siteUrl: 'https://tritonxr.ucsd.edu/',
     githubUrl: 'https://github.com/TritonXR/Website',
@@ -28,7 +28,7 @@ const DirectoryData = [
   },
   {
     title: 'Clostat',
-    image: './assets/images/clostat_prev.png',
+    image: 'assets/images/clostat_prev.png',
     id: 2,
     siteUrl: '',
     githubUrl: 'https://github.com/samnyevr/CloStat',
@@ -37,7 +37,7 @@ const DirectoryData = [
   },
   {
     title: 'Markit',
-    image: './assets/images/markit_prev.png',
+    image: 'assets/images/markit_prev.png',
     id: 1,
     siteUrl: '',
     githubUrl: 'https://github.com/Uye121/Markit',
