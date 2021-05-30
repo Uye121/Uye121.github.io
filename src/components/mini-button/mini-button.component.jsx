@@ -7,7 +7,7 @@ import './mini-button.styles.scss';
 const MiniButton = ({ icon, url, text }) => {
   console.log(url);
   return (
-  <a className=' button' href={url} target="_blank" rel="noreferrer">
+  <a className=' button' href="https://github.com/Uye121/YelpCamp" target="_blank" rel="noreferrer">
     <FontAwesomeIcon icon={icon} size='2x' color={'white'} />
     &nbsp;{text}
   </a>

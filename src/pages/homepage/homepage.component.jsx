@@ -6,14 +6,12 @@ import ArrowDown from '../../components/arrow-down/arrow-down.component';
 
 import './homepage.styles.scss';
 
-const HomePage = () => {
-  console.log("homepage");
-  return (
+const HomePage = () => (
   <div className='homepage-container'>
     <About />
     <ArrowDown />
     <Directory />
   </div>
-)};
+);
 
 export default HomePage;
