@@ -2,7 +2,7 @@
   "name": "uye121.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Uye121.github.io/",
+  "homepage": "https://Uye121.github.io",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -29,7 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
